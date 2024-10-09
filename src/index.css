@@ -1,0 +1,38 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+    font-family: "Raleway";
+}
+
+@property --transactions {
+    syntax: "<integer>";
+    initial-value: 0;
+    inherits: false;
+}
+
+@property --num-assets {
+    syntax: "<integer>";
+    initial-value: 0;
+    inherits: false;
+}
+
+@property --num-users {
+    syntax: "<integer>";
+    initial-value: 0;
+    inherits: false;
+}
+
+@keyframes counter {
+    from {
+        --transactions: 0;
+        --num-assets: 0;
+        --num-users: 0;
+    }
+    to {
+        --transactions: 4;
+        --num-assets: 10;
+        --num-users: 0;
+    }
+}
